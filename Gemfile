@@ -7,6 +7,7 @@ end
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'font-awesome-rails'
 
 gem 'rubocop'
 gem 'rubocop-rspec'
