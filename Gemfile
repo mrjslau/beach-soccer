@@ -5,13 +5,23 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# --------------------------------
+# Front endui
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
-gem 'bcrypt'
 
+# Sign up'ui/Log in
+gem 'bcrypt'
+gem 'simple_form'
+
+# Kodo stiliui
 gem 'rubocop'
 gem 'rubocop-rspec'
+
+# Testavimui
+gem 'rails-controller-testing'
+# --------------------------------
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
