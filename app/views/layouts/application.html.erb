@@ -9,7 +9,9 @@
   </head>
 
   <body style="background-color: #F5EFC2">
-    <%= render 'layouts/navigation'%>
+    <header class="mb-3">
+      <%= render 'layouts/navigation'%>
+    </header>
     <div class="container">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
