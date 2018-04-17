@@ -72,14 +72,23 @@ Rails.application.configure do
   require 'tlsmail'
   Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
   ActionMailer::Base.delivery_method = :smtp
+<<<<<<< HEAD
   config.action_mailer.raise_delivery_errors = true
+=======
+>>>>>>> a65e528... Email options for production
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default charset: 'utf-8'
   ActionMailer::Base.smtp_settings = {
     address:               'smtp.gmail.com',
+<<<<<<< HEAD
     port:                  '587',
     user_name:             ENV['GMAIL_USERNAME'],
     password:              ENV['GMAIL_PASSWORD'],
+=======
+    port:                  587,
+    user_name:             'gringolithuania@gmail.com',
+    password:              'Futbolas69?gg',
+>>>>>>> a65e528... Email options for production
     authentication:        'plain',
     enable_starttls_auto:  true
   }

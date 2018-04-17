@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+<%= stylesheet_link_tag "bootstrap-social" %>
+<%- if controller_name != 'sessions' %>
+  Turite anketą? Spauskite <%= link_to "Prisijungti", new_session_path(resource_name) %><br />
+<% end -%>
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "Registruotis", new_registration_path(resource_name) %><br />
+<% end -%>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Pamiršote slaptažodį?", new_password_path(resource_name) %><br />
+<% end -%>
+
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%= link_to "Negavote patvirtinimo laiško?", new_confirmation_path(resource_name) %><br />
+<% end -%>
+
+<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+  <%= link_to "Negavote anketos atrakinimo instrukcijų laiško?", new_unlock_path(resource_name) %><br />
+=======
+<%- if controller_name != 'sessions' %>
+  <%= link_to "Log in", new_session_path(resource_name) %><br />
+<% end -%>
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+<% end -%>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+<% end -%>
+
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+<% end -%>
+
+<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+  <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
+>>>>>>> 1af2277... Devise setup
+<% end -%>
+
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+<<<<<<< HEAD
+    <%= link_to raw("<span class='fa fa-facebook'></span>Prisijungti su #{OmniAuth::Utils.camelize(provider)}"), omniauth_authorize_path(resource_name, provider),
+     class: "btn btn-block btn-social btn-facebook", onclick:"_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);"%><br />
+=======
+    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+>>>>>>> 1af2277... Devise setup
+  <% end -%>
+<% end -%>

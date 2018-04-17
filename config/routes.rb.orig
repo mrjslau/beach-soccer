@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+=======
+  devise_for :users
+>>>>>>> 1af2277... Devise setup
   root 'teams#index'
   resources :teams
   resources :users

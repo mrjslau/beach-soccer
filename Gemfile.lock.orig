@@ -276,7 +276,11 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
+<<<<<<< HEAD
+ruby 2.5.0p0
+=======
    ruby 2.5.0p0
+>>>>>>> 216cdce... Facebook callback
 
 BUNDLED WITH
 1.16.1

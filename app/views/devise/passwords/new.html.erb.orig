@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+<h2>Pamiršote slaptažodį?</h2>
+=======
+<h2>Forgot your password?</h2>
+>>>>>>> 1af2277... Devise setup
+
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+<<<<<<< HEAD
+    <%= f.input :email, required: true, autofocus: true, label: "El. pašto adresas"  %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Atsiųsti slaptažodžio atstatymo instrukcijas" %>
+=======
+    <%= f.input :email, required: true, autofocus: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Send me reset password instructions" %>
+>>>>>>> 1af2277... Devise setup
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
