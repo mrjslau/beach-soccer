@@ -15,6 +15,8 @@ gem 'font-awesome-rails'
 gem 'bcrypt'
 gem 'simple_form'
 
+gem 'devise'
+
 # Kodo stiliui
 gem 'rubocop'
 gem 'rubocop-rspec'
