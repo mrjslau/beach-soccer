@@ -16,6 +16,7 @@ gem 'bcrypt'
 gem 'simple_form'
 
 gem 'devise'
+gem 'tlsmail'
 
 # Kodo stiliui
 gem 'rubocop'
