@@ -1,15 +1,19 @@
-<h2>Log in</h2>
+<div class="row mt-5">
+  <div class="col-md-4 offset-md-4">
+    <h2>Prisijungti</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true, label: "El. pašto adresas"  %>
-    <%= f.input :password, required: false, label: "Slaptažodis"  %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?%>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email, required: false, autofocus: true, label: "El. pašto adresas"  %>
+        <%= f.input :password, required: false, label: "Slaptažodis"  %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable?%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Prisijungti" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Prisijungti" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

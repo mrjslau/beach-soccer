@@ -12,11 +12,12 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 
 # Sign up'ui/Log in
-gem 'bcrypt'
 gem 'simple_form'
 
+gem 'omniauth-facebook'
 gem 'devise'
 gem 'tlsmail'
+
 
 # Kodo stiliui
 gem 'rubocop'

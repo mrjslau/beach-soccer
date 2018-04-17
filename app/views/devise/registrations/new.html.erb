@@ -1,17 +1,25 @@
-<h2>Registracija</h2>
+<div class="row mt-5">
+  <div class="col-md-4 offset-md-4">
+    <h2>Registracija</h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :email, required: true, autofocus: true, label: "El. pašto adresas" %>
+        <%= f.input :password, required: true,
+                               hint: ("Mažiausiai #{@minimum_password_length} raidės" if @minimum_password_length),
+                               label: "Slaptažodis" %>
+        <%= f.input :password_confirmation, required: true, label: "Pakartoti slaptažodį" %>
+      </div>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true, label: "El. pašto adresas" %>
-    <%= f.input :password, required: true, hint: ("Mažiausiai #{@minimum_password_length} raidės" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true, label: "Pakartoti slaptažodį" %>
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Registruotis" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Registruotis" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
