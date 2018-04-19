@@ -20,9 +20,9 @@
           <a class="nav-link text-info" href="#"> Apie mus </a>
         </li>
       </ul>
-      <% if !logged_in? %>
-        <span class="mr-2"><%= link_to "Prisijungti", login_path, class: "btn btn-primary" %></span>
-        <span class=""><%= link_to "Registruotis", signup_path, class: "btn btn-primary" %></span>
+      <% if !user_signed_in? %>
+        <span class="mr-2"><%= link_to "Prisijungti", new_user_session_path, class: "btn btn-primary" %></span>
+        <span class=""><%= link_to "Registruotis", new_user_registration_path, class: "btn btn-primary" %></span>
       <% else %>
         <span class="dropdown">
           <a href="#" class="dropdown-toggle mr-2" data-toggle="dropdown"> Account <b class="caret"></b></a>
@@ -32,7 +32,7 @@
             <li class="divider"></li>
           </ul>
         </span>
-        <%= link_to "Log out", logout_path, method: :delete %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
       <% end %>
     </div>
   </div>
