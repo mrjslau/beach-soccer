@@ -68,18 +68,17 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'https://stormy-dusk-39533.herokuapp.com' }
 
-  require 'tlsmail'
-  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
-    ActionMailer::Base.delivery_method = :smtp
-     config.action_mailer.perform_deliveries = true
-     config.action_mailer.default :charset => "utf-8"
-       ActionMailer::Base.smtp_settings = {
+  
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
        :address              => "smtp.gmail.com",
        :port                 => 587,
+       :domain               => 'gmail.com',
        :user_name            => "gringolithuania@gmail.com",
        :password             => 'Futbolas69?gg',
-       :authentication       => "plain",
-       :enable_starttls_auto => true
+       :authentication       => "plain"
        }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
