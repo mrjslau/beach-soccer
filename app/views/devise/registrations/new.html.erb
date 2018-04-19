@@ -11,9 +11,7 @@
                                label: "Slaptažodis" %>
         <%= f.input :password_confirmation, required: true, label: "Pakartoti slaptažodį" %>
       </div>
-
-      <%= link_to "Prisijungti su Facebook", user_facebook_omniauth_authorize_path %>
-
+      
       <div class="form-actions">
         <%= f.button :submit, "Registruotis" %>
       </div>
