@@ -257,7 +257,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   config.omniauth :facebook, "1728752563869861", "3112d0c351de01839f389208277ce55a",
-    callback_url: https://developers.facebook.com/apps/1728752563869861/fb-login/settings/ 
+    callback_url: "https://developers.facebook.com/apps/1728752563869861/fb-login/settings/" 
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
